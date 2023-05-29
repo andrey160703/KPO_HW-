@@ -1,0 +1,112 @@
+{
+	"info": {
+		"_postman_id": "b6a7482d-4ef5-4223-bda3-6930ce9ee2d7",
+		"name": "Users",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27669425"
+	},
+	"item": [
+		{
+			"name": "Получить информацию о пользователе по токену",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxNywiZXhwIjoxNjg1NDA1Njg1fQ.6bCXh9LeOxEpwOdG4d352jp_pA13jbaWwwyS_ogNaFY\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/user/access/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user",
+						"access",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Авторизация",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"ag.ssdoe@examples5.com\",\n  \"password\": \"er3\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/user/login/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user",
+						"login",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Создать пользователя",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"mas5\",\n    \"email\": \"ag.ssdoe@examples5.com\",\n    \"password\": \"er3\",\n    \"role\": \"manager\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/user/create/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user",
+						"create",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

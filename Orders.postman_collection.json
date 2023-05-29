@@ -1,0 +1,149 @@
+{
+	"info": {
+		"_postman_id": "b58b61e8-1b21-49f0-adc5-88c47b701816",
+		"name": "Orders",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27669425"
+	},
+	"item": [
+		{
+			"name": "Добавить новое блюдо",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Название блюда\",\n    \"description\": \"Описание блюда\",\n    \"price\": 9.99,\n    \"quantity\": 10,\n    \"is_available\": true,\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxNywiZXhwIjoxNjg1NDA1Njg1fQ.6bCXh9LeOxEpwOdG4d352jp_pA13jbaWwwyS_ogNaFY\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/orders/addDish/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"orders",
+						"addDish",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Получить информацию о блюде",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxNywiZXhwIjoxNjg1NDA1Njg1fQ.6bCXh9LeOxEpwOdG4d352jp_pA13jbaWwwyS_ogNaFY\",\n    \"dish_id\": \"1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/orders/getDish/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"orders",
+						"getDish",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Обновить блюдо",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"dish_id\": 1,\n  \"name\": \"Updated Dish Name\",\n  \"description\": \"Updated dish description\",\n  \"price\": 15.99,\n  \"quantity\": 5,\n  \"is_available\": true,\n  \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxNywiZXhwIjoxNjg1NDA1Njg1fQ.6bCXh9LeOxEpwOdG4d352jp_pA13jbaWwwyS_ogNaFY\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/orders/updateDish/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"orders",
+						"updateDish",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete dish",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"dish_id\": 2,\n  \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxNywiZXhwIjoxNjg1NDA1Njg1fQ.6bCXh9LeOxEpwOdG4d352jp_pA13jbaWwwyS_ogNaFY\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/orders/deleteDish/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"orders",
+						"deleteDish",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
